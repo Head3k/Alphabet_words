@@ -23,8 +23,15 @@ int more(char* k1, char* k2){
 int main(){ 
     int i;
 	while(0 == 0){
-    printf("\nU enter text --> get alphabet sorted text ");
-    
+/*	
+    printf("\n      _     _       _           _          _                           _      ");
+    printf("\n     / \   | |_ __ | |__   __ _| |__   ___| |_  __      _____  _ __ __| |___  ");
+    printf("\n    / _ \  | | '_ \| '_ \ / _` | '_ \ / _ \ __| \ \ /\ / / _ \| '__/ _` / __| ");
+    printf("\n   / ___ \ | | |_) | | | | (_| | |_) |  __/ |_   \ V  V / (_) | | | (_| \__ \ ");
+    printf("\n  /_/   \_\|_| .__/|_| |_|\__,_|_.__/ \___|\__|___\_/\_/ \___/|_|  \__,_|___/ ");
+    printf("\n             |_|                             |_____|                          ");
+*/
+	printf("\nU enter text --> get alphabet sorted text ");
     printf("\nPlease enter u text ==>");
     gets(str);
     int i;
