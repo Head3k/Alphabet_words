@@ -19,27 +19,13 @@ int more(char* k1, char* k2){
     if (k1[x]>k2[x]) return 1;
     return 0;
 }
-/*
-int more(char* s1, char* s2,char* k1, char* k2){
-    int x=0;
-    
-    s1[x] = tolower(s1[x]);
-    s2[x] = tolower(s2[x]);
-    
-	
-	while(s1[x]==s2[x] && x<strlen(s1) && x<strlen(s2)){
-        x++;
-    }
-    if (x==strlen(s1)) return 0;
-    if (x==strlen(s2)) return 1;
-    if (s1[x]>s2[x]) return 1;
-    return 0;
-}
-*/
+
 int main(){ 
     int i;
 	while(0 == 0){
-    printf("Text:");
+    printf("\nU enter text --> get alphabet sorted text ");
+    
+    printf("\nPlease enter u text ==>");
     gets(str);
     int i;
     for(i=0;i<strlen(str);i++){
