@@ -20,6 +20,11 @@ int more(char* k1, char* k2){
     return 0;
 }
 
+int clear(){
+	memset(names,0,1024);
+    memset(check,0,1024);
+}
+
 int main(){ 
     int i;
 	while(0 == 0){
@@ -30,10 +35,18 @@ int main(){
     printf("\n   / ___ \ | | |_) | | | | (_| | |_) |  __/ |_   \ V  V / (_) | | | (_| \__ \ ");
     printf("\n  /_/   \_\|_| .__/|_| |_|\__,_|_.__/ \___|\__|___\_/\_/ \___/|_|  \__,_|___/ ");
     printf("\n             |_|                             |_____|                          ");
-*/
+*/  
+    memset(names,0,1024);
+    memset(check,0,1024);
 	printf("\nU enter text --> get alphabet sorted text ");
+    printf("\nUse '0' for exit Alphabet_words");
     printf("\nPlease enter u text ==>");
     gets(str);
+    if (str[0] == '0')
+    	break;
+    if (str[0] == '9')
+    	clear(names);
+    	clear(check);
     int i;
     for(i=0;i<strlen(str);i++){
         j=0;
