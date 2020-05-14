@@ -1,4 +1,5 @@
 @echo off
+color 0a
 
 echo Welcome in install menu Alphabet_words		 
 
@@ -17,6 +18,9 @@ if "%digit%"=="3" call :3
 
 :1
   win_c\bin\dmc.exe src\main
+  move main.exe bin\main.exe
+  move main.map build\src\main.map
+  move main.obj build\src\main.obj
   ::set /p k = key :
   set /p k="Enter q for quit or r restart ==> "
   if "%k%"=="q" call :q
@@ -28,7 +32,8 @@ if "%digit%"=="3" call :3
   
 
 :2
-  main.exe
+  cls
+  bin\main.exe
   ::set /p k = key :
   set /p k="Enter q for quit or r restart ==> "
   if "%k%"=="q" call :q
@@ -38,10 +43,11 @@ if "%digit%"=="3" call :3
   :r
     goto start
 
-:3 
-  del main.exe
-  del main.map
-  del main.obj
+:3
+  cls 
+  del bin\main.exe
+  del build\src\main.map
+  del build\src\main.obj
   ::set /p k = key :
   set /p k="Enter q for quit or r restart ==> "
   if "%k%"=="q" call :q
