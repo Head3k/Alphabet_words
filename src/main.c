@@ -19,28 +19,26 @@ int more(char* k1, char* k2){
     if (k1[x]>k2[x]) return 1;
     return 0;
 }
-/*
-int more(char* s1, char* s2,char* k1, char* k2){
-    int x=0;
-    
-    s1[x] = tolower(s1[x]);
-    s2[x] = tolower(s2[x]);
-    
-	
-	while(s1[x]==s2[x] && x<strlen(s1) && x<strlen(s2)){
-        x++;
-    }
-    if (x==strlen(s1)) return 0;
-    if (x==strlen(s2)) return 1;
-    if (s1[x]>s2[x]) return 1;
-    return 0;
-}
-*/
+
 int main(){ 
     int i;
 	while(0 == 0){
-    printf("Text:");
+/*	
+    printf("\n      _     _       _           _          _                           _      ");
+    printf("\n     / \   | |_ __ | |__   __ _| |__   ___| |_  __      _____  _ __ __| |___  ");
+    printf("\n    / _ \  | | '_ \| '_ \ / _` | '_ \ / _ \ __| \ \ /\ / / _ \| '__/ _` / __| ");
+    printf("\n   / ___ \ | | |_) | | | | (_| | |_) |  __/ |_   \ V  V / (_) | | | (_| \__ \ ");
+    printf("\n  /_/   \_\|_| .__/|_| |_|\__,_|_.__/ \___|\__|___\_/\_/ \___/|_|  \__,_|___/ ");
+    printf("\n             |_|                             |_____|                          ");
+*/  
+    memset(names,0,1024);
+    memset(check,0,1024);
+	printf("\nU enter text --> get alphabet sorted text ");
+    printf("\nUse '0' for exit Alphabet_words");
+    printf("\nPlease enter u text ==>");
     gets(str);
+    if (str[0] == '0')
+    	break;
     int i;
     for(i=0;i<strlen(str);i++){
         j=0;
