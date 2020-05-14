@@ -1,0 +1,76 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
+char str[1024],names[64][16],check[64][16];
+int j,k,l;
+
+int more(char* k1, char* k2){
+    int x=0; int i;
+    
+    k1[x] = tolower(k1[x]);
+    k2[x] = tolower(k2[x]);
+    
+	while(k1[x]==k2[x] && x<strlen(k1) && x<strlen(k2)){
+        x++;
+    }
+    if (x==strlen(k1)) return 0;
+    if (x==strlen(k2)) return 1;
+    if (k1[x]>k2[x]) return 1;
+    return 0;
+}
+
+int clear(){
+	memset(names,0,1024);
+    memset(check,0,1024);
+}
+
+int main(){ 
+    int i;
+	while(0 == 0){
+/*	
+    printf("\n      _     _       _           _          _                           _      ");
+    printf("\n     / \   | |_ __ | |__   __ _| |__   ___| |_  __      _____  _ __ __| |___  ");
+    printf("\n    / _ \  | | '_ \| '_ \ / _` | '_ \ / _ \ __| \ \ /\ / / _ \| '__/ _` / __| ");
+    printf("\n   / ___ \ | | |_) | | | | (_| | |_) |  __/ |_   \ V  V / (_) | | | (_| \__ \ ");
+    printf("\n  /_/   \_\|_| .__/|_| |_|\__,_|_.__/ \___|\__|___\_/\_/ \___/|_|  \__,_|___/ ");
+    printf("\n             |_|                             |_____|                          ");
+*/  
+    memset(names,0,1024);
+    memset(check,0,1024);
+	printf("\nU enter text --> get alphabet sorted text ");
+    printf("\nUse '0' for exit Alphabet_words");
+    printf("\nPlease enter u text ==>");
+    gets(str);
+    if (str[0] == '0')
+    	break;
+    if (str[0] == '9')
+    	clear(names);
+    	clear(check);
+    int i;
+    for(i=0;i<strlen(str);i++){
+        j=0;
+        while(i+j<strlen(str) && str[i+j]!=',' && str[i+j]!=' '){
+            names[k][j]=str[i+j];
+            check[k][j]=str[i+j];
+            j++;
+        }
+        k++;
+        i+=j;
+    }
+    char tmp[16];
+    for(i=0;i<k-1;i++){
+    	int x;
+        for(x=k-2;x>=i;x--){
+            strcpy(check[x],names[x]);
+            strcpy(check[x+1],names[x+1]);
+			if (more(check[x],check[x+1])){
+                strcpy(tmp,names[x]);
+                strcpy(names[x],names[x+1]);
+                strcpy(names[x+1],tmp);
+            }
+        }
+    }
+    for (i=0;i<k;i++) puts(names[i]);
+}
+}
