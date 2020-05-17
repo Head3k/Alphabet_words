@@ -42,7 +42,10 @@ int main(){
     int i;
     for(i=0;i<strlen(str);i++){
         j=0;
-        while(i+j<strlen(str) && str[i+j]!=',' && str[i+j]!=' '){
+        while(i+j<strlen(str) && str[i+j]!=' ' && str[i+j]!=',' && str[i+j]!=';' &&
+        str[i+j]!=':' && str[i+j]!='"' && str[i+j]!='!' && str[i+j]!='-'
+        && str[i+j]!='(' && str[i+j]!=')' && str[i+j]!='...') 
+        {
             names[k][j]=str[i+j];
             check[k][j]=str[i+j];
             j++;
