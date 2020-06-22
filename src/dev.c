@@ -24,6 +24,9 @@ char computing(char *array, int count_words, int count_symbols){  // function fo
             array_char[k][j]=array[i+j]; // symbols -> words
             j++; // var for next symbol in words
         }
+        if (array[i+j]!=' '){
+            j++;
+        }
         i+=j; // save number last symbol
         k++; // var for next words in array
         j=0; // clear number last symbol

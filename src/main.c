@@ -23,7 +23,10 @@ char computing(char *array, int count_words, int count_symbols){  // function fo
         while(i+j<count_symbols && array[i+j]!=' ' && array[i+j]!='.' && array[i+j]!=',' && array[i+j]!=':' && array[i+j]!=';' && array[i+j]!='-'){  // cicle for symbols -> words
             array_char[k][j]=array[i+j]; // symbols -> words
             j++; // var for next symbol in words
-        }
+        }  //
+        if (array[i+j]!=' '){ // condition correct print
+            j++; // var for enumeration symbol
+        }  //
         i+=j; // save number last symbol
         k++; // var for next words in array
         j=0; // clear number last symbol
@@ -55,7 +58,7 @@ char string(int count_words){                     // function for enter data and
     int count_symbols=0;                             // init var for count symbols in the text
     char array[count_words*16];                          // create char array
     str = array;                                       // array --> str
-    printf("Please don't use a space after punctuation marks");  //
+    printf("Please use a space after punctuation marks");  //
     printf("\nEnter u text ==> ");                  //
     scanf("\n%d", &i);                                  // scan for clean clipboard
     while((*str ++= getchar ()) != '\n'){              // enter data
