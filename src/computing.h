@@ -4,7 +4,7 @@
 
 int sort(char* k1, char* k2);
 int stringing(int count_words);
-char computing(char* array,int count_words,int count_symbols);
+char computing(char array[][16],int count_words);
 void print();
 int stringing(int count_words);
 #endif
