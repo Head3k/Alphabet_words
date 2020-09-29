@@ -59,12 +59,13 @@ int stringing(             //
         int count_words)   // function for enter data and check quantity symbols
 {                          //
     printf("Please use a space after punctuation marks"); //
-    printf("\nEnter u text ==> ");                        //
+    printf("\nEnter u text ==> \n");                        //
     int i = 0;
 	int n = 0;
 	int t;
 	char str;
-	char array[count_words][16];                         // 5 words per 16 symbols
+	char array[count_words][16]; 
+    memset(array,0,16*count_words);                        // 5 words per 16 symbols
 	while (i<count_words){
 		while ((str = getchar()) != ' '){
 			if (str != ' '){
